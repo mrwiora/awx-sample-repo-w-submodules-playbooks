@@ -1,0 +1,8 @@
+---
+- hosts: localhost 
+  gather_facts: false
+  tasks:
+  -
+    shell: whoami 
+    register: sync
+    failed_when: "'fatal' in sync.stderr"
